@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+@font-face {
+  font-family: Roboto, sans-serif;
+  src: url("fonts/Roboto.ttf");
+}
+
+@font-face {
+  font-family: Lobster;
+  src: url("fonts/Lobster.ttf");
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.all {
+  flex-grow: 1;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  background: #213B7E;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: calc(50% - 1268px / 2);
+  padding-right: calc(50% - 1268px / 2);
+}
+
+.logo {
+  width: 60px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.menu__link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-decoration: underline;
+  color: white;
+  padding: 28px 18px;
+  display: block;
+}
+
+.menu__link_active {
+  color: #213B7E;
+  background-color: white;
+  text-decoration: none;
+}
+
+.button {
+  width: 153px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FF007A;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: white;
+  text-decoration: none;
+}
+
+#popup{
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1000;
+  background: #fff;
+  width: 500px;
+  padding: 26px 28px;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+  visibility: hidden;
+}
+
+#popup.active{
+  visibility: visible;
+  top: 50%;
+}
+
+#popup .content_popup{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#popup .content_popup h2{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  margin: 20px 0 10px;
+}
+
+#popup .content_popup .inputBox{
+  position: relative;
+  width: 100%;
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#popup .content_popup .inputBox input{
+  width: 444px;
+  border: 1px solid #808080;
+  padding-top: 17px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  outline: none;
+  font-size: 24px;
+}
+
+.button_popup {
+  width: 153px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FF007A;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: white;
+  text-decoration: none;
+  margin-top: 56px;
+  margin-bottom: 56px;
+
+}
+
+
+.content {
+  padding-left: calc(50% - 960px / 2);
+  padding-right: calc(50% - 960px / 2);
+}
+
+.content__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content__section {
+  width: 634px;
+}
+
+.heading {
+  font-family: 'Lobster', cursive;
+  width: 183px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  color: #646464;
+}
+
+.heading-marks {
+  font-size: 64px;
+  vertical-align: middle;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  color: #000000;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 29px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.about__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.self {
+  font-style: italic;
+  color: #EA5D21;
+}
+
+.footer {
+  background: #213B7E;
+  padding-top: 18px;
+  padding-bottom: 19px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 32px;
+}
+
+.footer_text {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* Студенты */
+
+.content__students {
+  padding-left: calc(50% - 1202px / 2);
+  padding-right: calc(50% - 1202px / 2);
+}
+
+.header__students {
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 36px;
+  color: #000000;
+  margin-top: 35px;
+  text-align: center;
+}
+
+.students {
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.student {
+  width: 200px;
+  position: relative;
+}
+
+.student__new {
+  position: absolute;
+  top: -12px;
+  right: -13px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background: #3AA828;
+  border-radius: 20px;
+  padding: 4px;
+  text-transform: uppercase;
+}
+
+.student__name {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+  text-align: center;
+  margin-top: 8px;
+}
+
+
+/* О курсе */
+
+.content__about {
+  padding-left: calc(50% - 820px / 2);
+  padding-right: calc(50% - 820px / 2);
+  text-align: center;
+}
+
+.subtitle__about {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  color: #000000;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.subtitle__text-about {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 15px;
+
+}
+
+
+/* Контакты */
+
+.content__contacts {
+  padding-left: calc(50% - 1268px / 2);
+  padding-right: calc(50% - 1268px / 2);
+}
+
+.map {
+  width: 100%;
+  height: 370px;
+}
+
+.title__contacts {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  color: #000000;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.header__adress {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 29px;
+  color: #000000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.phone {
+	color: #000;
+	font-size: 18px;
+	font-weight: 400;
+  padding-top: 21px;
+}
+.phone a {
+	color: #000;
+	font-size: 18px;
+	font-weight: 400;
+  
+}
+
+
+/* Стили для планшета */
+
+@media (max-width: 1300px) {
+  .header {
+      padding-left: 32px;
+      padding-right: 32px;
+  }
+
+  .menu {
+    margin-left: 0;
+  }
+
+  .menu__link {
+    font-size: 20px;
+    padding: 20px 12px;
+  }
+
+  .content {
+    padding-left: calc(50% - 736px / 2);
+    padding-right: calc(50% - 736px / 2);
+  } 
+
+  .content__section {
+    width: 90%;
+  }
+
+  .button {
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .students {
+    justify-content: center;
+  }  
+
+  .content-students {
+    padding-left: calc(50% - 736px / 2);
+    padding-right: calc(50% - 736px / 2);
+  }
+
+}
+
+
+ /* Стили для мобилки */ 
+
+@media (max-width: 767px) {
+  
+  .header {
+      padding-left: 0;
+      padding-right: 16px;
+}
+
+  .menu {
+      flex-direction: column;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .content {
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+  }
+
+  .content__info {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .header__students {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .content-students {
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+  }
+
+  .students {
+    justify-content: center;
+  }
+
+  .content__about {
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center; 
+  }
+
+  .subtitle__about {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .subtitle__text-about {
+    font-size: 20px;
+  }
+
+  .title__contacts {
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .map {
+    height: 250px;
+  }
+
+  .adress {
+    font-size: 16px;
+  }
+}
+
